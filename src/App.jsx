@@ -7,10 +7,12 @@ import Home from "../src/pages/home/Home";
 import About from "../src/pages/about/About";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/contact";
+import { FormProvider } from './Context/FormContext';
+import ConnectButton from './components/ConnectButton';
 
 function App() {
   return (
-    <>
+    <FormProvider>
       <Header />
 
       <Routes>
@@ -23,7 +25,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </>
+    </FormProvider>
   );
 }
 
