@@ -29,10 +29,7 @@ const Header = () => {
   });
 
   // Handle form input changes
-  const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
-  };
+  
 
   // Handle form submission
   const handleSubmit = (e) => {
