@@ -277,8 +277,6 @@ export default function StartupSaasBundle() {
               'Performance Management & Appraisals',
               'Time Tracking & Task Allocation',
               'Employee Benefits & Compliance',
-              'Employee Self-Service (ESS) Portal',
-              'Reports & Analytics'
             ].map((item, index) => (
               <div key={index} className="flex items-start">
                 <div className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5 mb-10" style={{ color: '#c49557' }}>
