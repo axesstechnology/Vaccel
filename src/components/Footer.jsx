@@ -84,6 +84,9 @@ export default function Footer() {
     <p className="text-xs mb-0 font-bold ">Copyright © 2025 V-ACCEL AI Dynamics, All Rights Reserved.</p>
   </div>
 </div>
+    <div></div>
+  )
+}
 
       </div>
     </footer>
