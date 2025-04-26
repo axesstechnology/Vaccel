@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-gray-50 text-gray-800 py-12 ">
       <div className="container mx-auto px-4 md:px-6">
         {/* Top Section */}
-        <div className="flex flex-col lg:flex-row justify-between">
+        <div className="flex flex-col text-lg font-semibold lg:flex-row justify-between mb-12 mx-8">
           {/* Links */}
           <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 lg:mb-0">
             {/* SERVICES */}
@@ -71,7 +71,7 @@ export default function Footer() {
 
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center text-xs py-1">
-  <div className="flex flex-wrap mb-2 md:mb-0">
+  <div className="flex flex-wrap text-lg font-semibold  mb-2 md:mb-0">
     <a href="#" className="hover:text-orange-500 mr-2">Privacy Policy</a>
     <span className="text-gray-400 mx-1">|</span>
     <a href="#" className="hover:text-orange-500 mr-2">Disclaimer</a>
@@ -81,12 +81,10 @@ export default function Footer() {
     <a href="#" className="hover:text-orange-500">Standard Policies</a>
   </div>
   <div className="text-center md:text-right">
-    <p className="text-xs mb-0 font-bold ">Copyright © 2025 V-ACCEL AI Dynamics, All Rights Reserved.</p>
+    <p className="text-lg font-semibold mb-0  ">Copyright © 2025 V-ACCEL AI Dynamics, All Rights Reserved.</p>
   </div>
 </div>
     <div></div>
-  )
-}
 
       </div>
     </footer>
