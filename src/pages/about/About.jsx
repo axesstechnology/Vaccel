@@ -299,27 +299,29 @@ const About = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="mt-16 rounded-2xl overflow-hidden bg-gradient-to-r from-blue-600 to-blue-400">
-        <div className="p-12 md:flex items-center justify-between relative">
-          {/* Background Shapes */}
-          <div className="absolute left-0 bottom-0 w-48 h-48 rounded-full bg-blue-500 opacity-20 -ml-16 -mb-16"></div>
-          <div className="absolute right-0 top-0 w-32 h-32 rounded-full bg-blue-300 opacity-20 -mr-10 -mt-10"></div>
-          
-          {/* Content */}
-          <div className="md:w-2/3 mb-8 md:mb-0 relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Join the future of <span className="text-white">AI SaaS</span></h3>
-            <p className="text-white text-lg">
-              We are shaping the future of AI-powered cloud software. Whether you are a startup, SME, or enterprise, we deliver custom AI SaaS solutions that accelerate innovation and drive success.
-            </p>
-          </div>
-          
-          <div className="md:w-1/3 text-center md:text-right relative z-10">
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors">
-              LET'S BUILD THE NEXT BIG THING!
-            </button>
-          </div>
+      <div className="w-full bg-blue-600 rounded-2xl overflow-hidden relative p-8 md:p-12">
+      {/* Background diagonal shapes */}
+      <div className="absolute left-0 bottom-0 w-64 h-64 bg-blue-400 opacity-70 rounded-full -translate-x-1/3 translate-y-1/3 transform rotate-45"></div>
+      <div className="absolute right-0 top-0 w-96 h-96 bg-blue-400 opacity-20 rounded-full translate-x-1/3 -translate-y-1/3 transform rotate-45"></div>
+      
+      <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="text-white max-w-2xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the future of AI SaaS</h2>
+          <p className="text-base md:text-lg">
+            We are shaping the future of AI-powered cloud software. Whether 
+            you are a startup, SME, or enterprise, we deliver custom AI SaaS 
+            solutions that accelerate innovation and drive success.
+          </p>
+        </div>
+        
+        <div className="w-full md:w-auto mt-6 md:mt-0">
+          <button className="bg-white text-blue-500 hover:bg-blue-50 transition-colors font-bold py-4 px-8 rounded-lg text-center whitespace-nowrap">
+            LET'S BUILD THE NEXT BIG THING!
+          </button>
         </div>
       </div>
+    </div>
+
     </div>
 
 
