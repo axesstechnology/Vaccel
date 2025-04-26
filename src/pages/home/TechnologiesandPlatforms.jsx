@@ -1,73 +1,162 @@
-import React, { useState } from 'react';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
-import { motion } from "framer-motion";
+import { useState } from 'react';
+import { 
+  Database, Smartphone, FileText, Server, Cloud, 
+  GitBranch, Brain, Code, Monitor
+} from 'lucide-react';
 
-const techStack = {
-  Frontend: [
-    { name: "AngularJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
-    { name: "ReactJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-    { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-    { name: "Nextjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-  ],
-  Backend: [],
-  Mobile: [],
-  "No Code": [],
-  Databases: [],
-  "Cloud DB": [],
-  DevOps: []
-};
+export default function TechnologiesPlatforms() {
+  const [activeCategory, setActiveCategory] = useState('Frontend');
+  
+  // Category definitions with proper icons and technology data
+  const categories = [
+    { 
+      id: 'Frontend', 
+      icon: <Monitor size={20} />,
+      technologies: [
+        { name: 'AngularJS', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/angular.svg" },
+        { name: 'ReactJS', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/react.svg" },
+        { name: 'JavaScript', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/javascript.svg" },
+        { name: 'CSS3', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/css3.svg" },
+        { name: 'HTML5', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/html5.svg" },
+        { name: 'Nextjs', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/nextdotjs.svg" }
+      ]
+    },
+    { 
+      id: 'Backend', 
+      icon: <Server size={20} />,
+      technologies: [
+        { name: 'Node.js', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/nodejs.svg" },
+        { name: 'Python', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/python.svg" },
+        { name: 'Java', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/java.svg" },
+        { name: 'Ruby', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/ruby.svg" },
+        { name: 'PHP', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/php.svg" },
+        { name: 'Go', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/go.svg" }
+      ]
+    },
+    { 
+      id: 'Mobile', 
+      icon: <Smartphone size={20} />,
+      technologies: [
+        { name: 'React Native', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/react.svg" },
+        { name: 'Flutter', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/flutter.svg" },
+        { name: 'Swift', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/swift.svg" },
+        { name: 'Kotlin', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/kotlin.svg" },
+        { name: 'Ionic', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/ionic.svg" },
+        { name: 'Xamarin', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/xamarin.svg" }
+      ]
+    },
+    { 
+      id: 'No Code', 
+      icon: <FileText size={20} />,
+      technologies: [
+        { name: 'Bubble', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/bubble.svg" },
+        { name: 'Webflow', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/webflow.svg" },
+        { name: 'Airtable', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/airtable.svg" },
+        { name: 'Zapier', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/zapier.svg" },
+        { name: 'Wix', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/wix.svg" },
+        { name: 'Shopify', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/shopify.svg" }
+      ]
+    },
+    { 
+      id: 'Databases', 
+      icon: <Database size={20} />,
+      technologies: [
+        { name: 'MongoDB', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/mongodb.svg" },
+        { name: 'PostgreSQL', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/postgresql.svg" },
+        { name: 'MySQL', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/mysql.svg" },
+        { name: 'Redis', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/redis.svg" },
+        { name: 'SQLite', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/sqlite.svg" },
+        { name: 'Oracle', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/oracle.svg" }
+      ]
+    },
+    { 
+      id: 'Cloud DB', 
+      icon: <Cloud size={20} />,
+      technologies: [
+        { name: 'AWS DynamoDB', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/amazondynamodb.svg" },
+        { name: 'Firebase', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/firebase.svg" },
+        { name: 'Google Firestore', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/googlecloud.svg" },
+        { name: 'Azure Cosmos DB', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/microsoftazure.svg" },
+        { name: 'Supabase', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/supabase.svg" },
+        { name: 'PlanetScale', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/planetscale.svg" }
+      ]
+    },
+    { 
+      id: 'DevOps', 
+      icon: <GitBranch size={20} />,
+      technologies: [
+        { name: 'Docker', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/docker.svg" },
+        { name: 'Kubernetes', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/kubernetes.svg" },
+        { name: 'Jenkins', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/jenkins.svg" },
+        { name: 'GitHub Actions', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/githubactions.svg" },
+        { name: 'Terraform', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/terraform.svg" },
+        { name: 'Ansible', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/ansible.svg" }
+      ]
+    },
+    { 
+      id: 'Artificial Intelligence', 
+      icon: <Brain size={20} />,
+      technologies: [
+        { name: 'TensorFlow', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/tensorflow.svg" },
+        { name: 'PyTorch', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/pytorch.svg" },
+        { name: 'OpenAI', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/openai.svg" },
+        { name: 'Hugging Face', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/huggingface.svg" },
+        { name: 'Scikit-learn', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/scikitlearn.svg" },
+        { name: 'Keras', imgSrc: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/8.12.0/keras.svg" }
+      ]
+    }
+  ];
 
-const TechStackTabs = () => {
-  const [selectedTab, setSelectedTab] = useState("Frontend");
+  // Find the active category
+  const activeCategoryData = categories.find(cat => cat.id === activeCategory) || categories[0];
 
   return (
-    <div className="max-w-6xl mx-auto py-10">
-      <h2 className="text-3xl font-bold text-center text-amber-700 mb-4">
-        Technologies and Platforms We Use
-      </h2>
-      <p className="text-center text-gray-600 mb-10">
-        We build mobile and web applications with a focus on performance and longevity, using cutting-edge technologies, frameworks, and tools.
-      </p>
-      <div className="flex rounded-2xl shadow-lg overflow-hidden">
-        <Tabs value={selectedTab} onValueChange={setSelectedTab} orientation="vertical" className="flex w-full">
-          <TabsList className="bg-slate-900 text-white flex flex-col w-60 p-4 gap-2 overflow-y-auto">
-            {Object.keys(techStack).map(category => (
-              <TabsTrigger key={category} value={category} className="text-left px-4 py-2 rounded-md hover:bg-slate-700 focus:outline-none">
-                {category}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+    <div className="flex flex-col w-full max-w-6xl mx-auto p-6">
+      {/* Header */}
+      <div className="text-center mb-8">
+        <h1 className="text-3xl font-bold text-amber-700 mb-4">Technologies and Platforms We Use</h1>
+        <p className="text-gray-700 max-w-4xl mx-auto">
+          We build mobile and web applications with a focus on performance and longevity, using cutting-edge technologies, frameworks, and tools. 
+          Every solution we craft aligns with industry best practices and is purpose-built to support your unique business objectives and long-term success.
+        </p>
+      </div>
 
-          <ScrollArea className="flex-1 bg-white p-6 max-h-[400px] overflow-y-auto">
-            {Object.entries(techStack).map(([category, items]) => (
-              <TabsContent key={category} value={category}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-                >
-                  {items.length > 0 ? (
-                    items.map((tech, index) => (
-                      <div key={index} className="p-4 border rounded-2xl shadow-sm flex items-center gap-4">
-                        <img src={tech.icon} alt={tech.name} className="w-10 h-10" />
-                        <div className="text-lg font-medium">{tech.name}</div>
-                      </div>
-                    ))
-                  ) : (
-                    <p className="text-gray-500">No technologies listed yet.</p>
-                  )}
-                </motion.div>
-              </TabsContent>
+      {/* Main content */}
+      <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
+        {/* Left sidebar */}
+        <div className="w-full md:w-64 bg-gray-900 text-white p-4">
+          <div className="space-y-4 overflow-y-auto max-h-96">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                className={`flex items-center space-x-3 w-full text-left p-2 rounded-md transition-colors ${
+                  activeCategory === category.id ? 'bg-blue-900 bg-opacity-50' : 'hover:bg-gray-800'
+                }`}
+                onClick={() => setActiveCategory(category.id)}
+              >
+                <div className="text-xl flex items-center justify-center w-6 h-6">
+                  {category.icon}
+                </div>
+                <span className="font-medium">{category.id}</span>
+              </button>
             ))}
-          </ScrollArea>
-        </Tabs>
+          </div>
+        </div>
+
+        {/* Right content area - Dynamically shows content based on active category */}
+        <div className="flex-1 p-6 bg-gray-50">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {activeCategoryData.technologies.map((tech) => (
+              <div key={tech.name} className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow flex items-center space-x-4">
+                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-gray-50 rounded-md">
+                  <img src={tech.imgSrc} alt={tech.name} className="w-8 h-8" />
+                </div>
+                <span className="font-medium text-gray-800">{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
-};
-
-export default TechStackTabs;
+}
