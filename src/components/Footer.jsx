@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 export default function Footer() {
   return (
     <div className="bg-gray-50 text-gray-800 px-4 sm:px-6 lg:px-12">
@@ -69,13 +70,13 @@ export default function Footer() {
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row justify-between items-center text-xs py-2">
             <div className="flex flex-wrap text-sm sm:text-base font-semibold mb-2 md:mb-0">
-              <a href="#" className="hover:text-blue-500 mr-2">Privacy Policy</a>
+              <Link to={"/privacy-policy"} className="hover:text-blue-500 mr-2">Privacy Policy</Link>
               <span className="text-gray-400 mx-1">|</span>
-              <a href="#" className="hover:text-blue-500 mr-2">Disclaimer</a>
+              <Link to={"/privacy-policy"} className="hover:text-blue-500 mr-2">Disclaimer</Link >
               <span className="text-gray-400 mx-1">|</span>
-              <a href="#" className="hover:text-blue-500 mr-2">Terms and Conditions</a>
+              <Link  to={"/privacy-policy"} className="hover:text-blue-500 mr-2">Terms and Conditions</Link >
               <span className="text-gray-400 mx-1">|</span>
-              <a href="#" className="hover:text-blue-500">Standard Policies</a>
+              <Link to={"/privacy-policy"} className="hover:text-blue-500">Standard Policies</Link >
             </div>
             <div className="text-center md:text-right">
               <p className="text-sm sm:text-lg font-semibold mb-0">Copyright © 2025 V-ACCEL AI Dynamics, All Rights Reserved.</p>
