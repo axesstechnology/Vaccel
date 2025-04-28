@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import image from '../../assets/img/industries.webp'
 
 function HeroInd() {
@@ -8,7 +7,7 @@ function HeroInd() {
     <div className="relative bg-navy-900 h-screen flex items-center justify-start overflow-hidden">
       
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full opacity-70">
         <img
           src={image}
           alt="SaaS AI"
