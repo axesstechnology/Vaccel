@@ -34,7 +34,7 @@ const WhyChoose = () => {
   return (
     <div 
       ref={ref}
-      className="max-w-7xl mx-12 px-4 py-16 flex flex-col md:flex-row gap-12 items-center"
+      className="max-w-7xl mx-12 pl-20 px-4 py-16 flex flex-col md:flex-row gap-12 items-center"
     >
       
       {/* Left Side - Content (with two icons in one row) */}
