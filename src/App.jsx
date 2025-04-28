@@ -11,6 +11,7 @@ import { FormProvider } from './Context/FormContext';
 import CustomSoftware from "./pages/services/CustomSoftware/CustomSoftware";
 import Industries from "./pages/Industries/Industries";
 import SaaS from "./pages/services/SaaS/SaaS";
+import Aws from "./pages/services/aws/Aws";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/custom-software" element={<CustomSoftware />} />
         <Route path="/services/SaaS-Development" element={<SaaS />} />
+        <Route path="/services/devops/aws" element={<Aws />} />
         <Route path="*" element={<Home />} />
       </Routes>
 
