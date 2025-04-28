@@ -207,7 +207,7 @@ const Header = () => {
               <span className={`transition-transform duration-300 ${openSections.customSoftware ? 'rotate-180' : ''}`}>&#9662;</span>
             </div>
             <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.customSoftware ? 'flex' : 'hidden'}`}>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Custom Software Solutions</Link>
+              <Link to={"/services/custom-software"} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Custom Software Solutions</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>SaaS Development</Link>
             </div>
           </div>

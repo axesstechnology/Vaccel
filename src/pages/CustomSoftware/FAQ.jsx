@@ -37,7 +37,7 @@ export default function FAQ() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center text-amber-700 mb-8">Frequently Asked Questions</h1>
+      <h1 className="text-3xl font-bold text-center text-[#b5824e] mb-8">Frequently Asked Questions</h1>
       <p className="text-center text-gray-700 mb-10">
         Here are some questions you might have. If you have other questions, feel free to contact or have a consultation session-
       </p>
