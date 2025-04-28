@@ -261,7 +261,6 @@ export default function StartupSaasBundle() {
 
       {/* Main Content */}
       <div className="flex flex-col md:flex-row pt-8 px-4 md:px-12 max-w-6xl mx-auto">
-        {/* Left Side - Dynamic Content */}
         <div className="md:w-1/3 pr-6">
           <h2 className="text-3xl font-bold mb-2" style={{ color: '#c49557' }}>{selectedSection}</h2>
           <p className="text-gray-700 text-sm mb-6">
@@ -270,26 +269,109 @@ export default function StartupSaasBundle() {
             {selectedSection === 'Project Management' && 'Our Project Management tools are designed to help teams collaborate effectively, stay organized, and track the progress of projects.'}
             {selectedSection === 'Account Management' && 'Our Account Management tool simplifies financial operations, helping track and manage expenses, income, and ensure compliance.'}
           </p>
+          <div className="space-y-3">
+            {selectedSection === 'HRMS' && [
+              'Employee Database & Management',
+              'Recruitment & Onboarding',
+              'Attendance & Payroll Management',
+              'Performance Management & Appraisals',
+              'Time Tracking & Task Allocation',
+              'Employee Benefits & Compliance',
+              'Employee Self-Service (ESS) Portal',
+              'Reports & Analytics'
+            ].map((item, index) => (
+              <div key={index} className="flex items-start">
+                <div className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5 mb-10" style={{ color: '#c49557' }}>
+                  <svg xmlns="" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                </div>
+                <span className="text-sm">{item}</span>
+              </div>
+            ))}
+            {selectedSection === 'CRM' && [
+              'Lead Management',
+              'Sales Pipeline Tracking',
+              'Customer Support Ticketing',
+              'Marketing Campaigns',
+              'Customer Feedback Analysis',
+              'Reports & Analytics'
+            ].map((item, index) => (
+              <div key={index} className="flex items-start">
+                <div className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5 mb-10" style={{ color: '#c49557' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                </div>
+                <span className="text-sm">{item}</span>
+              </div>
+            ))}
+            {selectedSection === 'Project Management' && [
+              'Task Assignment & Tracking',
+              'Gantt Charts',
+              'Team Collaboration Tools',
+              'Resource Allocation',
+              'Project Budgeting',
+              'Reports & Analytics'
+            ].map((item, index) => (
+              <div key={index} className="flex items-start">
+                <div className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5 mb-10" style={{ color: '#c49557' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                </div>
+                <span className="text-sm">{item}</span>
+              </div>
+            ))}
+            {selectedSection === 'Account Management' && [
+              'Expense Tracking',
+              'Invoice Generation',
+              'Tax Compliance',
+              'Financial Reporting',
+              'Budget Planning',
+              'Reports & Analytics'
+            ].map((item, index) => (
+              <div key={index} className="flex items-start">
+                <div className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5 mb-10" style={{ color: '#c49557' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                </div>
+                <span className="text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Right Side - Diagram or additional content */}
         <div className="md:w-2/3 mt-8 md:mt-0">
-          {/* You can add diagrams here based on the selected section */}
-          {/* You could conditionally render different diagrams or content for each section */}
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="relative w-full" style={{ minHeight: '450px' }}>
-              {/* Example of HRMS Content */}
               {selectedSection === 'HRMS' && (
                 <div className="absolute" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
                   <span className="text-4xl font-bold text-gray-700">HRMS Diagram</span>
                 </div>
               )}
-
-              {/* Similar content or diagrams for other sections can go here */}
+              {selectedSection === 'CRM' && (
+                <div className="absolute" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                  <span className="text-4xl font-bold text-gray-700">CRM Diagram</span>
+                </div>
+              )}
+              {selectedSection === 'Project Management' && (
+                <div className="absolute" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                  <span className="text-4xl font-bold text-gray-700">Project Management Diagram</span>
+                </div>
+              )}
+              {selectedSection === 'Account Management' && (
+                <div className="absolute" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                  <span className="text-4xl font-bold text-gray-700">Account Management Diagram</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
+     
     </div>
   );
 }

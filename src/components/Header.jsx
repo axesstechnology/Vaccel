@@ -64,9 +64,9 @@ const Header = () => {
           className="flex flex-col justify-between w-6 h-5 cursor-pointer"
           onClick={() => setNavMenuOpen(true)}
         >
-          <span className="block w-full h-px bg-black"></span>
-          <span className="block w-3/5 h-px bg-black"></span>
-          <span className="block w-full h-px bg-black"></span>
+          <span className="block w-full h-px bg-white"></span>
+          <span className="block w-3/5 h-px bg-white"></span>
+          <span className="block w-full h-px bg-white"></span>
         </div>
 
         {/* Get Started / Let's Connect Button */}
@@ -126,7 +126,7 @@ const Header = () => {
               </Link>
             </div>
             
-            <Link className="text-white no-underline transition-colors hover:text-white" onClick={closeAll}>Industries</Link>
+            <Link to={"/industries"} className="text-white no-underline transition-colors hover:text-white" onClick={closeAll}>Industries</Link>
             <Link className="text-white no-underline transition-colors hover:text-white" onClick={closeAll}>Contact</Link>
           </div>
           
@@ -323,6 +323,5 @@ const Header = () => {
     </>
   );
 };
-
 
 export default Header;
