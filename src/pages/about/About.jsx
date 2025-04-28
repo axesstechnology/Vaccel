@@ -1,11 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import HeroSection from './HeroSection';
 import CompanyOverview from './CompanyOverview';
-import WhatWeDo from './WhatWeDo';
+import WhatWeAre from './WhatWeAre';
 import WhyChoose from './WhyChoose';
 
-// Dummy data for expertise items (you should replace icons with real icons)
+
 const expertiseItems = [
   {
     icon: (
@@ -72,63 +73,56 @@ const expertiseItems = [
     ),
     title: 'Digital Marketing',
   },
-];;
+];
+// Animation variants
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' },
+  },
+};
 
 const About = () => {
+  const expertiseRef = useRef(null);
+  const isExpertiseInView = useInView(expertiseRef, { once: true });
+
   return (
     <div>
       <HeroSection />
       <CompanyOverview />
-      <WhatWeDo />
+      <WhatWeAre />
       <WhyChoose />
 
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        {/* Expertise Section */}
-        <div className="text-center mb-16">
-  <h2 className="relative inline-block text-4xl font-bold mb-4">
-    {/* Outer Text */}
-    <span className="absolute inset-0 text-gray-100 text-6xl flex justify-center items-center opacity-30 group-hover:opacity-100 transition-all duration-500">
-      EXPERTISE
-    </span>
-    
-    {/* Inner Text */}
-    <span className="relative z-10 text-3xl text-[#b5824e] group-hover:text-[#e1a95f] transition-all duration-500">
-      Our Expertise
-    </span>
-  </h2>
-</div>
+      <div className="max-w-7xl mx-auto pl-8 px-4 py-16" ref={expertiseRef}>
+        <motion.div
+          initial="hidden"
+          animate={isExpertiseInView ? 'visible' : 'hidden'}
+          variants={sectionVariants}
+          className="text-center mb-16"
+        >
+          <h2 className="relative inline-block text-4xl font-bold mb-4">
+            <span className="absolute inset-0 text-gray-100 text-6xl -z-10 flex justify-center items-center">EXPERTISE</span>
+            <span className="relative z-10 text-3xl flex justify-center items-center text-[#b58227]">Our Expertise</span>
+          </h2>
+        </motion.div>
 
         {/* Expertise Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {expertiseItems.slice(0, 4).map((item, index) => (
+          {expertiseItems.map((item, index) => (
             <div
               key={index}
               className="bg-white p-8 flex flex-col items-center justify-center text-center border border-gray-100 rounded-lg"
             >
-              <div className="text-gray-800 mb-4 text-3xl">
-                {item.icon}
-              </div>
-              <h3 className="font-bold text-lg text-gray-800">{item.title}</h3>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 mb-8">
-          {expertiseItems.slice(4).map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 flex flex-col items-center justify-center text-center border border-gray-100 rounded-lg"
-            >
-              <div className="text-gray-800 mb-4 text-3xl">
-                {item.icon}
-              </div>
+              <div className="text-gray-800 mb-4 text-3xl">{item.icon}</div>
               <h3 className="font-bold text-lg text-gray-800">{item.title}</h3>
             </div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <div className="w-full bg-blue-600 rounded-2xl overflow-hidden relative p-8 md:p-12">
+        <div className="w-full bg-blue-600 rounded-2xl overflow-hidden relative p-8 md:p-12 mt-16">
           {/* Background shapes */}
           <div className="absolute left-0 bottom-0 w-64 h-64 bg-blue-400 opacity-70 rounded-full -translate-x-1/3 translate-y-1/3 transform rotate-45"></div>
           <div className="absolute right-0 top-0 w-96 h-96 bg-blue-400 opacity-20 rounded-full translate-x-1/3 -translate-y-1/3 transform rotate-45"></div>

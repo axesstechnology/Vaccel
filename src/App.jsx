@@ -8,6 +8,8 @@ import About from "../src/pages/about/About";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/contact";
 import { FormProvider } from './Context/FormContext';
+import CustomSoftware from "./pages/CustomSoftware/CustomSoftware";
+import ConnectButton from './components/ConnectButton';
 import Industries from "./pages/Industries/Industries";
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/custom-software" element={<CustomSoftware />} />
         <Route path="*" element={<Home />} />
       </Routes>
 
