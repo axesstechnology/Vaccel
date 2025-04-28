@@ -527,8 +527,8 @@ export default function TechnologiesPlatforms() {
       {/* Main content */}
       <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden h-96">
         {/* Left sidebar - categories */}
-        <div className="w-full md:w-64 bg-gray-900 text-white p-4 overflow-y-auto">
-          <div className="space-y-4">
+        <div className="w-full md:w-64 bg-gray-900 text-white p-4 overflow-y-auto overflow-x-hidden">
+          <div className="space-y-4 overflow-hidden">
             {categories.map((category) => (
               <button
                 key={category.id}
