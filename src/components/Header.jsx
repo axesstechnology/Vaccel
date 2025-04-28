@@ -279,7 +279,7 @@ const Header = () => {
               <span className={`transition-transform duration-300 ${openSections.devOps ? 'rotate-180' : ''}`}>&#9662;</span>
             </div>
             <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.devOps ? 'flex' : 'hidden'}`}>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>AWS</Link>
+              <Link to={'/services/devops/aws'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>AWS</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>CI/CD Pipeline Implementation</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Docker & Kubernetes</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Serverless Applications</Link>
