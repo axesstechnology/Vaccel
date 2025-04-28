@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import whatWeDoImg from '/src/assets/img/TeamWorking.jpg'; // Update the path if needed
@@ -11,7 +9,7 @@ const WhatWeAre = () => {
   return (
     <div 
       ref={ref}
-      className="flex flex-col md:flex-row gap-8 my-12 mx-16 items-center"
+      className="flex flex-col md:flex-row gap-8 my-12 px-4 md:px-16 items-center"
     >
       {/* Left Side - Image */}
       <motion.div 
@@ -24,7 +22,7 @@ const WhatWeAre = () => {
           <img 
             src={whatWeDoImg} 
             alt="Team working on SaaS solutions" 
-            className="rounded-lg shadow-lg object-cover w-[350px] h-[500px] max-w-sm"
+            className="rounded-lg shadow-lg object-cover w-full max-w-xs sm:max-w-sm md:w-[350px] md:h-[500px]"
             loading="lazy"
           />
         </div>
@@ -41,7 +39,7 @@ const WhatWeAre = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.4, duration: 0.7 }}
-          className="text-3xl font-bold text-[#b5824e] mb-6"
+          className="text-2xl sm:text-3xl font-bold text-[#b5824e] mb-6 text-center md:text-left"
         >
           What We Are
         </motion.h2>
@@ -51,7 +49,7 @@ const WhatWeAre = () => {
           initial={{ scaleX: 0 }}
           animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="w-16 h-1 bg-[#b5824e] mb-8 origin-left"
+          className="w-16 h-1 bg-[#b5824e] mb-8 origin-left mx-auto md:mx-0"
         ></motion.div>
 
         {/* Service items container */}
@@ -89,10 +87,10 @@ const WhatWeAre = () => {
               transition={{ delay: 0.6 + index * 0.2, duration: 0.7 }}
               className="mb-4"
             >
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 {item.desc}
               </p>
             </motion.div>

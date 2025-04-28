@@ -12,7 +12,6 @@ export default function FAQ() {
       question: "How do you assist in the existing enterprise software development projects?",
       answer: "We assist the business with existing enterprise software to introduce new updates with advanced features and functionalities to make the software deliver the current requirements of present-day workflow."
     },
-   
     {
       question: "What are the benefits of Enterprise Software Development Company for a business?",
       answer: "Enterprise Software Development Company optimizes the enterprise process, polishes the resource planning strategies, and automates the business workflow to secure increased revenue."
@@ -42,17 +41,17 @@ export default function FAQ() {
         Here are some questions you might have. If you have other questions, feel free to contact or have a consultation session-
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6">
         {faqItems.map((item, index) => (
           <div 
             key={index}
-            className="border border-gray-200 rounded-lg overflow-hidden"
+            className="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
           >
             <div 
-              className="flex justify-between items-center p-4 cursor-pointer"
+              className="flex justify-between items-center p-4 cursor-pointer bg-white hover:bg-gray-100 transition-all"
               onClick={() => toggleFAQ(index)}
             >
-              <h3 className={`font-medium ${index === 0 ? "text-blue-600" : "text-gray-800"}`}>
+              <h3 className={`font-medium ${openIndex === index ? "text-blue-600" : "text-gray-800"}`}>
                 {item.question}
               </h3>
               <button className="text-gray-500">
