@@ -220,10 +220,17 @@ const Header = () => {
               Web Development
               <span className={`transition-transform duration-300 ${openSections.webDevelopment ? 'rotate-180' : ''}`}>&#9662;</span>
             </div>
-            {/* <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.webDevelopment ? 'flex' : 'hidden'}`}>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Manual Testing</Link>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Automation Testing</Link>
-            </div> */}
+             <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.webDevelopment ? 'flex' : 'hidden'}`}>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">UI/UX Design</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Website Design & Development</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Front-End Development</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Back-End Development</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">E-Commerce Website Development</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">CMS Development</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Responsive Website Design</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Website Maintenance & Support</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Full Stack Web Development (MERN)</Link>
+            </div> 
           </div>
           
           <div className="mb-5">
@@ -235,7 +242,7 @@ const Header = () => {
               <span className={`transition-transform duration-300 ${openSections.softwareTesting ? 'rotate-180' : ''}`}>&#9662;</span>
             </div>
             <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.softwareTesting ? 'flex' : 'hidden'}`}>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Manual Testing</Link>
+              <Link to={"/services/testing/manual-testing"} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Manual Testing</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Automation Testing</Link>
             </div>
           </div>
