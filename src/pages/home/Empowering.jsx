@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MdArrowForward as ArrowRight } from 'react-icons/md'; // Import ArrowRight icon
 
 export default function BusinessSoftwarePage() {
   const [activeService, setActiveService] = useState('software-development');
@@ -117,12 +118,24 @@ export default function BusinessSoftwarePage() {
                   </a>
                 ))}
               </div>
-            </div>
-
-            
+            </div> 
           </div>
         </div>
       </div>
+        {/* CTA Section with Female Image */}
+        <div className="max-w-6xl mx-auto px-4 w-full mt-16">
+              <div className="rounded-lg overflow-hidden bg-gradient-to-r from-blue-700 to-purple-600 p-8 md:p-12">
+                <div className="flex flex-col md:flex-row md:items-center justify-between">
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-0 md:mr-6 md:flex-1">
+                  Tech powered success awaits empower your journey!
+                  </h2>
+                  <button className="flex items-center bg-white text-blue-900 font-semibold px-6 py-3 rounded-full w-fit whitespace-nowrap">
+                    Schedule a Call
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
     </div>
   );
 }
