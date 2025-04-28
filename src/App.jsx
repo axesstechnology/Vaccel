@@ -8,7 +8,7 @@ import About from "../src/pages/about/About";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/contact";
 import { FormProvider } from './Context/FormContext';
-import ConnectButton from './components/ConnectButton';
+import Industries from "./pages/Industries/Industries";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/industries" element={<Industries />} />
         <Route path="/services" element={<Services />} />
         <Route path="*" element={<Home />} />
       </Routes>
