@@ -507,7 +507,12 @@ export default function TechnologiesPlatforms() {
       setActiveCategory(categoryId);
     }
   };
-
+  useEffect(() => {
+    document.body.style.backgroundColor = '#f5f5f5';
+    return () => {
+      document.body.style.backgroundColor = '';
+    };
+  }, []);
   return (
     <div className="flex flex-col w-full max-w-6xl mx-auto p-6">
       {/* Header */}
