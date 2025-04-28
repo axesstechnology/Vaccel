@@ -8,10 +8,11 @@ import About from "../src/pages/about/About";
 import Services from "./pages/services/Services";
 import Contact from "./pages/contact/contact";
 import { FormProvider } from './Context/FormContext';
-import CustomSoftware from "./pages/services/CustomSoftware/CustomSoftware";
 import Industries from "./pages/Industries/Industries";
-import SaaS from "./pages/services/SaaS/SaaS";
 import Aws from "./pages/services/aws/Aws";
+import PrivacyPolicy from "./pages/footerPage/privacyPolicy/privacyPolicy";
+import CustomSoftware from "./pages/services/SoftwareDevolopment/CustomSoftware/CustomSoftware";
+import SaaS from "./pages/services/SoftwareDevolopment/SaaS/SaaS";
 import ManualTesting from "./pages/services/manual-testing/ManualTesting";
 
 function App() {
@@ -26,10 +27,13 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/custom-software" element={<CustomSoftware/>} />
+        <Route path="/services/SaaS-Development" element={<SaaS/>} />
         <Route path="/services/custom-software" element={<CustomSoftware />} />
         <Route path="/services/SaaS-Development" element={<SaaS />} />
         <Route path="/services/testing/manual-testing" element={<ManualTesting />} />
         <Route path="/services/devops/aws" element={<Aws />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
         <Route path="*" element={<Home />} />
       </Routes>
 
