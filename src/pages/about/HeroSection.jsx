@@ -5,7 +5,7 @@ import saasAi from "/src/assets/img/saas.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-navy-900 h-screen flex items-center justify-start overflow-hidden">
+    <div className="relative bg-navy-900 h-screen flex items-center justify-start overflow-hidden ">
       
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
@@ -28,7 +28,7 @@ const HeroSection = () => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative z-10 container mx-auto px-6 h-full flex items-center justify-start flex-col md:flex-row"
       >
-        <div className="max-w-2xl text-center md:text-left">
+        <div className="max-w-2xl text-center md:text-left pl-20">
           <motion.p 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -49,7 +49,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-amber-500 mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#b5824e] mb-6 leading-tight"
           >
             AI-Driven SaaS <br /> Solutions
           </motion.h1>
