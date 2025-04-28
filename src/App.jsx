@@ -13,7 +13,7 @@ import Aws from "./pages/services/aws/Aws";
 import PrivacyPolicy from "./pages/footerPage/privacyPolicy/privacyPolicy";
 import CustomSoftware from "./pages/services/SoftwareDevolopment/CustomSoftware/CustomSoftware";
 import SaaS from "./pages/services/SoftwareDevolopment/SaaS/SaaS";
-
+import ManualTesting from "./pages/services/manual-testing/ManualTesting";
 
 function App() {
   return (
@@ -29,6 +29,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/custom-software" element={<CustomSoftware/>} />
         <Route path="/services/SaaS-Development" element={<SaaS/>} />
+        <Route path="/services/custom-software" element={<CustomSoftware />} />
+        <Route path="/services/SaaS-Development" element={<SaaS />} />
+        <Route path="/services/testing/manual-testing" element={<ManualTesting />} />
         <Route path="/services/devops/aws" element={<Aws />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
         <Route path="*" element={<Home />} />

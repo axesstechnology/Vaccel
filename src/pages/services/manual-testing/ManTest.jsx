@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { motion } from 'framer-motion';
-import img from '../../assets/img/logistics.webp';
+import img from '../../../assets/img/testing-manual.avif'
 
-function Logistics() {
+function ManTest() {
   return (
     <motion.section
       initial="hidden"
@@ -46,49 +46,15 @@ function Logistics() {
         className="w-full md:w-1/2 space-y-8 p-8"
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-6 flex items-center gap-4">
-          <span>🚚</span> Logistics
+          <span>Manual</span>Testing
         </h2>
         <p className="text-gray-700 text-xl">
-          Streamlining operations with real-time tracking and automation.
+        In 2025, flawless software isn’t optional—it’s essential.Our Manual Testing Services ensure your applications perform perfectly, delivering quality your users can trust. With a human touch, we uncover what automation misses, specializing in Functional Testing, UI/UX Testing, and Regression Testing. Our skilled testers bring precision, insight, and reliability to every project, keeping your software rock-solid and user-ready. Ready to launch with confidence? Let’s test it right.
         </p>
-
-        {/* Staggered List */}
-        <motion.ul
-          initial="hidden"
-          whileInView="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.2, // items animate one-by-one
-              }
-            }
-          }}
-          className="space-y-4"
-        >
-          {[
-            'Fleet & Route Optimization',
-            'Shipment & Warehouse Management',
-            'Transport & Freight Portals',
-            'Last-Mile Delivery Systems'
-          ].map((item, index) => (
-            <motion.li
-              key={index}
-              variants={{
-                hidden: { opacity: 0, x: -50 },
-                visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 50, damping: 15 } }
-              }}
-              className="flex items-start gap-3 text-gray-800 text-lg"
-            >
-              <span className="text-green-500">✅</span>
-              {item}
-            </motion.li>
-          ))}
-        </motion.ul>
       </motion.div>
       
     </motion.section>
-  );
+  )
 }
 
-export default Logistics;
+export default ManTest
