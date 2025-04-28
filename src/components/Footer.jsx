@@ -42,7 +42,6 @@ export default function Footer() {
                 <h3 className="text-[#b5824e] font-bold text-xl sm:text-2xl mb-4">COMPANY</h3>
                 <ul className="space-y-2 sm:space-y-3">
                   <li><Link to="/about-us" className="hover:text-blue-500">About Us</Link></li>
-                  <li><Link to="/careers" className="hover:text-blue-500">Careers</Link></li>
                   <li><Link to="/contact-us" className="hover:text-blue-500">Contact Us</Link></li>
                 </ul>
               </div>
