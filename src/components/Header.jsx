@@ -287,9 +287,9 @@ const Header = () => {
             </div>
             <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.devOps ? 'flex' : 'hidden'}`}>
               <Link to={'/services/devops/aws'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>AWS</Link>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>CI/CD Pipeline Implementation</Link>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Docker & Kubernetes</Link>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Serverless Applications</Link>
+              <Link to={'/services/devops/cicd'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>CI/CD Pipeline Implementation</Link>
+              <Link to={'/services/devops/doc-and-kubernetes'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Docker & Kubernetes</Link>
+              <Link to={'/services/devops/serverless'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Serverless Applications</Link>
             </div>
           </div>
 
