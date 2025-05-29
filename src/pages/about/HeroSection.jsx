@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import saasAi from "/src/assets/img/saas.jpg";
+import saasAi from "/src/assets/img/healthCare.jpg";
 
 const HeroSection = () => {
   return (
@@ -51,7 +51,7 @@ const HeroSection = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#b5824e] mb-4 sm:mb-6 leading-tight"
           >
-            AI-Driven SaaS <br className="hidden sm:block" /> Solutions
+            AI-Driven Solutions
           </motion.h1>
 
           <motion.p 

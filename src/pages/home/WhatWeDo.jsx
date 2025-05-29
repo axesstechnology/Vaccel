@@ -112,7 +112,7 @@ export default function WhatWeDo() {
         </div>
       </div>
     {/* CTA Section with Female Image */}
-    <div className="max-w-6xl mx-auto px-4 w-full mt-16">
+    {/* <div className="max-w-6xl mx-auto px-4 w-full mt-16">
         <div className="rounded-lg overflow-hidden bg-gradient-to-r from-blue-700 to-purple-600 p-8 md:p-12">
             <div className="flex flex-col md:flex-row md:items-center justify-between">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-0 md:mr-6 md:flex-1">
@@ -124,7 +124,7 @@ export default function WhatWeDo() {
                 </button>
             </div>
         </div>
-    </div>
+    </div> */}
     </div>
   );
 }

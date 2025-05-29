@@ -15,7 +15,7 @@ const Home = () => {
       <CraftingIntelligentSystems/>
       <Empowering/>
       <WhatWeDo/>
-      <StartupSaasBundle/>
+      {/* <StartupSaasBundle/> */}
       <TechnologiesPlatforms/>
       <LatestNewsInsights/>
      

@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Top Section */}
           <div className="flex flex-col lg:flex-row justify-between mb-8 lg:mb-12">
             {/* Links */}
-            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-10 mb-8 lg:mb-0">
+            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 lg:gap-10 mb-8 lg:mb-0">
               {/* SERVICES */}
               <div>
                 <h3 className="text-[#b5824e] font-bold text-xl sm:text-2xl mb-4">SERVICES</h3>
@@ -24,7 +24,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* INDUSTRIES */}
+              {/* INDUSTRIES
               <div>
                 <h3 className="text-[#b5824e] font-bold text-xl sm:text-2xl mb-4">INDUSTRIES</h3>
                 <ul className="space-y-2 sm:space-y-3">
@@ -36,14 +36,14 @@ export default function Footer() {
                   <li><Link to="/industries/media-entertainment" className="hover:text-blue-500">Media & Entertainment</Link></li>
                   <li><Link to="/industries/on-demand" className="hover:text-blue-500">On-Demand</Link></li>
                 </ul>
-              </div>
+              </div> */}
 
               {/* COMPANY */}
               <div>
                 <h3 className="text-[#b5824e] font-bold text-xl sm:text-2xl mb-4">COMPANY</h3>
                 <ul className="space-y-2 sm:space-y-3">
-                  <li><Link to="/about-us" className="hover:text-blue-500">About Us</Link></li>
-                  <li><Link to="/contact-us" className="hover:text-blue-500">Contact Us</Link></li>
+                  <li><Link to="/about" className="hover:text-blue-500">About Us</Link></li>
+                  <li><Link to="/" className="hover:text-blue-500">Contact Us</Link></li>
                 </ul>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Footer() {
                 </li>
                 <li className="flex items-center">
                   <span className="mr-3 text-xl">📧</span>
-                  <a href="mailto:info@v-accel.ai" className="hover:text-blue-500">info@v-accel.ai</a>
+                  <a href="mailto:info@Alphacode.ai" className="hover:text-blue-500">info@Alphacode.ai</a>
                 </li>
               </ul>
             </div>
@@ -79,7 +79,7 @@ export default function Footer() {
               <Link to={"/privacy-policy"} className="hover:text-blue-500">Standard Policies</Link >
             </div>
             <div className="text-center md:text-right">
-              <p className="text-sm sm:text-lg font-semibold mb-0">Copyright © 2025 V-ACCEL AI Dynamics, All Rights Reserved.</p>
+              <p className="text-sm sm:text-lg font-semibold mb-0">Copyright © 2025 Alphacode , All Rights Reserved.</p>
             </div>
           </div>
         </div>

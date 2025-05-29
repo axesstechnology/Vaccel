@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import saasAi from "/src/assets/img/saas.jpg"; // Make sure the image path is correct
+import saasAi from "/src/assets/img/realEstate.png"; // Make sure the image path is correct
 
 const HeroCustom = () => {
     return (
@@ -47,7 +47,7 @@ const HeroCustom = () => {
                         className="text-white text-base sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10"
                     >
                         In 2025, generic software won’t keep you ahead our Custom Software Solutions will. 
-                        At V-ACCEL, we build tailored technology that fits your unique needs, driving efficiency, 
+                        At Alphacode, we build tailored technology that fits your unique needs, driving efficiency, 
                         growth, and innovation. Specializing in CRM, HRMS, ERP, and CMS, our expert team delivers 
                         scalable, future-ready systems that transform how you work. Ready to power your business 
                         with custom brilliance? Let’s get started.

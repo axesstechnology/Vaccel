@@ -18,7 +18,7 @@ export default function FAQ() {
     },
     {
       question: "What enterprise software development services do you provide?",
-      answer: "The NineHertz Provides a range of enterprise software development services including Custom Enterprise Software Development, Enterprise Mobility Development, Software Integration Services, Legacy Application Modernization, Enterprise Data Management, and Software Maintenance & Support."
+      answer: "The tzNineHer Provides a range of enterprise software development services including Custom Enterprise Software Development, Enterprise Mobility Development, Software Integration Services, Legacy Application Modernization, Enterprise Data Management, and Software Maintenance & Support."
     },
     {
       question: "What’s your policy for signing Non-Disclosure Agreement and Intellectual property?",

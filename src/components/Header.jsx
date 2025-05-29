@@ -126,8 +126,17 @@ const Header = () => {
               </Link>
             </div>
             
-            <Link to={"/industries"} className="text-white no-underline transition-colors hover:text-white" onClick={closeAll}>Industries</Link>
-            <Link className="text-white no-underline transition-colors hover:text-white" onClick={closeAll}>Contact</Link>
+            {/* <Link to={"/industries"} className="text-white no-underline transition-colors hover:text-white" onClick={closeAll}>Industries</Link> */}
+            <Link 
+              onClick={(e) => {
+                e.preventDefault();
+                closeAll();
+                openDrawer();
+              }} 
+              className="text-white no-underline transition-colors hover:text-white"
+            >
+              Contact
+            </Link>
           </div>
           
           {/* Right Column (Contact Info) */}
@@ -135,7 +144,7 @@ const Header = () => {
             <div>
               <p className="uppercase font-bold text-xs mb-2 text-white">Visit Us</p>
               <p>
-                <strong>V-ACCEL DYNAMICS PRIVATE LIMITED</strong><br />
+                <strong>ALPHACODE PRIVATE LIMITED</strong><br />
                 <Link to="#" className="text-white underline leading-relaxed">
                   No:04,Ground Floor,<br />TIDEL Park,<br />Rajiv Gandhi Salai,<br />Tharamani,
                   <br />Chennai -113
@@ -145,8 +154,8 @@ const Header = () => {
             
             <div>
               <p className="uppercase font-bold text-xs mb-2 text-white">Write To Us</p>
-              <Link to={"mailto:info@v-accel.ai"} className="text-white underline leading-relaxed">
-                info@v-accel.ai
+              <Link to={"mailto:info@Alphacode.ai"} className="text-white underline leading-relaxed">
+                info@Alphacode.ai
               </Link>
             </div>
             
@@ -221,15 +230,15 @@ const Header = () => {
               <span className={`transition-transform duration-300 ${openSections.webDevelopment ? 'rotate-180' : ''}`}>&#9662;</span>
             </div>
              <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.webDevelopment ? 'flex' : 'hidden'}`}>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">UI/UX Design</Link>
+              {/* <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">UI/UX Design</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Website Design & Development</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Front-End Development</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Back-End Development</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">E-Commerce Website Development</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">CMS Development</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Responsive Website Design</Link>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Website Maintenance & Support</Link>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Full Stack Web Development (MERN)</Link>
+              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Website Maintenance & Support</Link> */}
+              <Link to={"/services/Webdevelopmennt/mernstack"} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Full Stack Web Development (MERN)</Link>
             </div> 
           </div>
           
@@ -243,39 +252,39 @@ const Header = () => {
             </div>
             <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.softwareTesting ? 'flex' : 'hidden'}`}>
               <Link to={"/services/testing/manual-testing"} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Manual Testing</Link>
-              <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Automation Testing</Link>
+              <Link to={"/services/AutomationTesting"} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Automation Testing</Link>
             </div>
           </div>
 
-          <div className="mb-5">
+          {/* <div className="mb-5">
             <div 
               className="text-3xl cursor-pointer flex justify-between items-center py-4 text-white md:text-2xl"
               onClick={() => toggleSubSection("softwareTesting")}
             >
               AI Bot Development
-              <span className={`transition-transform duration-300 ${openSections.aiBotDevelopment ? 'rotate-180' : ''}`}>&#9662;</span>
-            </div>
+              <span className={`transition-transform duration-300 ${openSections.softwareTesting ? 'rotate-180' : ''}`}>&#9662;</span>
+            </div> */}
             {/* <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.softwareTesting ? 'flex' : 'hidden'}`}>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Manual Testing</Link>
               <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Automation Testing</Link>
             </div> */}
-          </div>
+          {/* </div> */}
           
-          <div className="mb-5">
+          {/* <div className="mb-5">
             <div 
               className="text-3xl cursor-pointer flex justify-between items-center py-4 text-white md:text-2xl"
               onClick={() => toggleSubSection("softwareSolutions")}
             >
               SaaS Solutions
               <span className={`transition-transform duration-300 ${openSections.softwareSolutions ? 'rotate-180' : ''}`}>&#9662;</span>
-            </div>
+            </div> */}
             {/* {openSections.softwareSolutions && (
               <div className="flex-col pl-8 mt-5 border-l-4 border-gray-700">
                 <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Solution 1</Link>
                 <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Solution 2</Link>
               </div>
             )} */}
-          </div>
+          {/* </div> */}
 
           <div className="mb-5">
             <div 
@@ -287,43 +296,43 @@ const Header = () => {
             </div>
             <div className={`flex-col pl-8 mt-5 border-l-4 border-gray-700 ${openSections.devOps ? 'flex' : 'hidden'}`}>
               <Link to={'/services/devops/aws'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>AWS</Link>
-              <Link to={'/services/devops/cicd'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>CI/CD Pipeline Implementation</Link>
-              <Link to={'/services/devops/doc-and-kubernetes'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Docker & Kubernetes</Link>
-              <Link to={'/services/devops/serverless'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Serverless Applications</Link>
+              <Link to={'/services/devops/cicdPipline'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>CI/CD Pipeline Implementation</Link>
+              {/* <Link to={'/services/devops/doc-and-kubernetes'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Docker & Kubernetes</Link>
+              <Link to={'/services/devops/serverless'} className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl" onClick={closeAll}>Serverless Applications</Link> */}
             </div>
           </div>
 
-          <div className="mb-5">
+          {/* <div className="mb-5">
             <div 
               className="text-3xl cursor-pointer flex justify-between items-center py-4 text-white md:text-2xl"
               onClick={() => toggleSubSection("digitalMarketing")}
             >
               Digital Marketing
               <span className={`transition-transform duration-300 ${openSections.digitalMarketing ? 'rotate-180' : ''}`}>&#9662;</span>
-            </div>
+            </div> */}
             {/* {openSections.digitalMarketing && (
               <div className="flex-col pl-8 mt-5 border-l-4 border-gray-700">
                 <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Marketing Service 1</Link>
                 <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Marketing Service 2</Link>
               </div>
             )} */}
-          </div>
+          {/* </div> */}
 
-          <div className="mb-5">
+          {/* <div className="mb-5">
             <div 
               className="text-3xl cursor-pointer flex justify-between items-center py-4 text-white md:text-2xl"
               onClick={() => toggleSubSection("productEngineering")}
             >
               Product Engineering
               <span className={`transition-transform duration-300 ${openSections.productEngineering ? 'rotate-180' : ''}`}>&#9662;</span>
-            </div>
+            </div> */}
             {/* {openSections.productEngineering && (
               <div className="flex-col pl-8 mt-5 border-l-4 border-gray-700">
                 <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Engineering Service 1</Link>
                 <Link className="text-white no-underline text-2xl py-3 ml-4 hover:text-white md:text-xl">Engineering Service 2</Link>
               </div>
             )} */}
-          </div>
+          {/* </div> */}
         </div>
       </div>
 
